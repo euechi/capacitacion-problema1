@@ -4,4 +4,5 @@ Integrantes:
 - Jean Carlos Lizano Arroyo
 - Eduardo Akira Uechi Lopez
 
+se modifico
 manuel rojas
