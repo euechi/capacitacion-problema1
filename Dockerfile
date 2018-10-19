@@ -1,4 +1,1 @@
-FROM nginx:alpine
-RUN mkdir app
-COPY intro.md /app
-COPY preguntas.md /app
+FROM node:10.10.0-slim
