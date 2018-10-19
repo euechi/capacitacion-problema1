@@ -1,7 +1,9 @@
-version: '2'
+version: '3'
 services:
-    nginx:
-        container_name: nginx_app
-        image: "euechi/orbis-training-docker:1.0.0"
+    node:
+        container_name: node_preguntas2
+        image: "euechi/orbis-training-docker:4.2.0"
         ports:
-            - "1080:80"
+            - "1024:3030"
+        command: npm start
+        working_dir: /app
