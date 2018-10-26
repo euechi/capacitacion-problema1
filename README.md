@@ -6,3 +6,6 @@ docker run -w /app -v  "D:\Eduardo\Capacitaciones\2.Docker\Ejercicios\orbis-trai
 docker run -p "3030:3030" -p "35729:3030" -w /app -v "D:\Eduardo\Capacitaciones\2.Docker\Ejercicios\orbis-training-project":/app  euechi/orbis-training-docker:4.0.0 npm start
 docker run -p "1024:3030" -p "35729:3030" -w /app -v "D:\Eduardo\Capacitaciones\2.Docker\Ejercicios\orbis-training-project":/app  euechi/orbis-training-docker:4.0.0 npm start
 docker-compose -f ./docker-compose.yml up
+docker run --net=host node:10.10.0-slim curl http://localhost:1024
+docker run -w /app -v  "D:\Eduardo\Capacitaciones\2.Docker\Ejercicios\orbis-training-project\resources":/app  euechi/orbis-training-docker:4.0.0 ./example.sh; saludo
+docker run -w /app -v  "D:\Eduardo\Capacitaciones\2.Docker\Ejercicios\orbis-training-project\resources":/app --entrypoint ./ejecutando.sh euechi/orbis-training-docker:4.0.0

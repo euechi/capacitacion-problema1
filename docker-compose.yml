@@ -1,9 +1,16 @@
 version: '3'
 services:
     node:
-        container_name: node_preguntas2
+        container_name: node_preguntas3
         image: "euechi/orbis-training-docker:4.2.0"
         ports:
             - "1024:3030"
         command: npm start
         working_dir: /app
+    test:
+        container_name: test_name
+        image: node:10.10.0-slim
+        command: "curl http://0.0.0.0:1024/#1"
+        network_mode: "host"
+        depends_on:
+            - "node"
